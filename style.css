@@ -1,11 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
-*,
-*::before,
-*::after {
+:root {
+	--light-brown: rgb(236, 225, 223);
+	--medium-brown: rgb(206, 178, 172);
+	--dark-brown: rgb(83, 56, 49);
+	--font-used: "Poppins", sans-serif;
+}
+
+* {
+	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
-	box-sizing: border-box;
 }
 
 html {
@@ -13,18 +18,16 @@ html {
 }
 
 body {
-	background-color: rgb(236, 225, 223);
+	background-color: var(--light-brown);
 }
 .content {
 	height: 100vh;
 	display: flex;
-	flex-direction: column;
 	justify-content: center;
-	font-family: "Poppins", sans-serif;
+	font-family: var(--font-used);
 }
 
 nav {
-	overflow: hidden;
 	position: fixed;
 	top: 0%;
 	width: 100%;
@@ -32,13 +35,13 @@ nav {
 	justify-content: space-around;
 	align-items: center;
 	min-height: 70px;
-	background: rgb(206, 178, 172);
-	font-family: "Poppins", sans-serif;
+	background: var(--medium-brown);
+	font-family: var(--font-used);
 	z-index: 1;
 }
 
 .logo {
-	color: rgb(83, 56, 49);
+	color: var(--dark-brown);
 	text-transform: uppercase;
 	letter-spacing: 5px;
 	font-size: 20px;
@@ -60,96 +63,74 @@ nav {
 	letter-spacing: 3px;
 	font-weight: bold;
 	font-size: 14px;
-	color: rgb(83, 56, 49);
-}
-
-main {
-	top: calc(5vh + 70px);
-	align-self: center;
-	position: relative;
-	width: 90%;
-	display: flex;
-	justify-content: center;
-	height: calc(100vh - 70px);
+	color: var(--dark-brown);
 }
 
 .home-content {
-	width: 50%;
-	height: fit-content;
-	padding-right: 5vw;
-}
-
-.home-content h1,
-.home-content h2 {
-	text-align: right;
-	color: rgb(83, 56, 49);
-}
-.home-content h1 {
-	font-size: 50px;
-}
-
-.home-content h2 {
-	font-size: 30px;
-}
-
-.carousel {
-	width: 50%;
-	height: fit-content;
-}
-
-.carousel-container {
-	position: relative;
-	overflow: hidden;
-	box-shadow: 10px 10px 10px rgba(128, 128, 128, 0.5);
-	border-radius: 15px;
-}
-
-.carousel-slide {
 	display: flex;
-	height: 650px;
-	width: 100%;
+	flex-direction: column;
+	justify-content: center;
 }
 
-.carousel-slide img {
-	object-position: bottom;
-	object-fit: cover;
-	width: 100%;
+.home-headers {
+	position: absolute;
+	top: 100px;
+	right: 0px;
+	width: auto;
 }
 
-#prev-btn {
-	position: absolute;
-	top: 50%;
-	z-index: 10;
-	left: 5%;
-	font-size: 40px;
-	color: rgb(206, 178, 172);
-	cursor: pointer;
+.home-headers h1,
+.home-headers h2 {
+	margin-right: 17vw;
+	text-align: right;
+	color: var(--dark-brown);
 }
-#next-btn {
-	position: absolute;
-	top: 50%;
-	z-index: 10;
-	right: 5%;
-	font-size: 40px;
-	color: rgb(206, 178, 172);
+
+.home-headers h1 {
+	font-size: 100px;
+}
+
+.home-headers h2 {
+	font-size: 80px;
+}
+
+.home-content img {
+	height: 60vh;
+	filter: hue-rotate(330deg);
+	opacity: 0.3;
+}
+
+.order-btn {
+	align-self: center;
+	position: relative;
+	top: -125px;
+	color: var(--light-brown);
+	background-color: rgba(83, 56, 49, 0.7);
+	border: none;
+	border-radius: 15px;
+	font-size: large;
+	font-weight: bold;
 	cursor: pointer;
+	text-decoration: none;
+	padding: 10px 15px;
+}
+
+.order-btn:hover {
+	color: var(--dark-brown);
+	background-color: var(--light-brown);
 }
 
 footer {
+	position: absolute;
 	padding: 20px;
 	left: 0;
 	bottom: 0;
 	height: 15vh;
 	width: 100%;
-	background-color: rgb(206, 178, 172);
+	background-color: var(--medium-brown);
 }
 
 footer p {
 	font-size: 20px;
 	text-align: center;
 }
-/* https://www.pexels.com/photo/baked-pies-and-bread-in-baskets-4916562/ */
-/* https://www.pexels.com/photo/brown-bar-stools-in-front-of-rectangular-table-3262277/ */
-/* https://www.pexels.com/photo/brown-wooden-table-and-chairs-3968061/ */
-/* https://www.pexels.com/photo/clean-coffee-shop-2467287/ */
-/* https://www.pexels.com/photo/people-in-cafe-2788792/ */
