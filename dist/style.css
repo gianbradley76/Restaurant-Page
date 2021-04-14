@@ -4,6 +4,9 @@
 	--light-brown: rgb(236, 225, 223);
 	--medium-brown: rgb(206, 178, 172);
 	--dark-brown: rgb(83, 56, 49);
+	--light-brown-transparent: rgba(236, 225, 223, 0.5);
+	--medium-brown-transparent: rgba(206, 178, 172, 0.5);
+	--dark-brown-transparent: rgba(83, 56, 49, 0.8);
 	--font-used: "Poppins", sans-serif;
 }
 
@@ -14,17 +17,19 @@
 }
 
 html {
-	height: 100vh;
+	height: 100%;
 }
 
 body {
 	background-color: var(--light-brown);
+	height: 100%;
 }
+
 .content {
-	height: 100vh;
 	display: flex;
-	justify-content: center;
+	flex-direction: column;
 	font-family: var(--font-used);
+	height: 100%;
 }
 
 nav {
@@ -34,7 +39,7 @@ nav {
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
-	min-height: 70px;
+	height: 70px;
 	background: var(--medium-brown);
 	font-family: var(--font-used);
 	z-index: 1;
@@ -45,7 +50,6 @@ nav {
 	text-transform: uppercase;
 	letter-spacing: 5px;
 	font-size: 20px;
-
 	cursor: pointer;
 }
 
@@ -67,7 +71,23 @@ nav {
 	color: var(--dark-brown);
 }
 
+footer {
+	padding: 20px;
+	left: 0;
+	bottom: 0;
+	height: 15vh;
+	width: 100%;
+	background-color: var(--medium-brown);
+}
+
+footer p {
+	font-size: 20px;
+	text-align: center;
+	color: var(--dark-brown);
+}
+
 .home-content {
+	height: 100%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -88,15 +108,20 @@ nav {
 }
 
 .home-headers h1 {
+	text-transform: uppercase;
 	font-size: 100px;
 }
 
 .home-headers h2 {
+	text-transform: capitalize;
 	font-size: 80px;
 }
 
 .home-content img {
-	height: 60vh;
+	position: relative;
+	top: 60px;
+	align-self: center;
+	height: 70vh;
 	filter: hue-rotate(330deg);
 	opacity: 0.3;
 }
@@ -104,9 +129,9 @@ nav {
 .order-btn {
 	align-self: center;
 	position: relative;
-	top: -125px;
+	top: -100px;
 	color: var(--light-brown);
-	background-color: rgba(83, 56, 49, 0.7);
+	background-color: var(--dark-brown-transparent);
 	border: none;
 	border-radius: 15px;
 	font-size: large;
@@ -121,18 +146,91 @@ nav {
 	background-color: var(--light-brown);
 }
 
-footer {
-	position: absolute;
-	padding: 20px;
-	left: 0;
-	bottom: 0;
-	height: 15vh;
-	width: 100%;
-	background-color: var(--medium-brown);
+.menu-content {
+	margin-top: 100px;
+	margin-bottom: 70px;
+	background-color: var(--light-brown);
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-items: center;
 }
 
-footer p {
-	font-size: 20px;
+.menu-items {
+	display: grid;
+	justify-content: center;
+	align-content: center;
+	border-radius: 50%;
+	box-shadow: 10px 10px 10px var(--medium-brown);
+	margin: 50px;
+	width: 400px;
+	height: 400px;
+	background-color: var(--dark-brown-transparent);
+	overflow: hidden;
+}
+
+.menu-items:nth-child(odd) {
+	background-image: url(media/coffee-cup.png);
+	background-position: center;
+	background-size: 80%;
+	background-repeat: no-repeat;
+}
+
+.menu-items:nth-child(even) {
+	background-image: url(media/pexels-chevanon-photography-312418.jpg);
+	background-size: cover;
+	background-position: bottom;
+}
+
+.overlay {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	position: relative;
+	top: 275px;
+	height: 160px;
+	width: 400px;
+	transition: 0.5s ease-in-out;
+	background-color: var(--medium-brown);
+	opacity: 0;
+}
+
+.menu-items h2 {
 	text-align: center;
+	text-transform: capitalize;
+	font: var(--font-used);
+	font-size: 2.5em;
 	color: var(--dark-brown);
+}
+
+.menu-items h3 {
+	text-align: center;
+	text-transform: capitalize;
+	font: var(--font-used);
+	font-size: 1.5em;
+	color: var(--dark-brown);
+}
+
+.buy-btn {
+	margin: 5px auto;
+	width: 120px;
+	background-color: var(--dark-brown-transparent);
+	color: var(--light-brown);
+	border-radius: 15px;
+	font-weight: bold;
+	font-size: 1em;
+	cursor: pointer;
+	text-decoration: none;
+	text-align: center;
+	padding: 10px;
+}
+
+.buy-btn:hover {
+	color: var(--dark-brown);
+	background-color: var(--light-brown);
+}
+
+.menu-items:hover .overlay {
+	opacity: 1;
+	top: 120px;
 }

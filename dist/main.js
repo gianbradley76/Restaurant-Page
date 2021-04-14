@@ -9,7 +9,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-function creatNav() {
+function createNav() {
 	const nav = document.createElement("nav");
 
 	const logoContainer = document.createElement("div");
@@ -53,10 +53,10 @@ function createMain() {
 	homeHeaders.classList.add("home-headers");
 
 	const mainHeader = document.createElement("h1");
-	mainHeader.innerText = "MAIN HEADER";
+	mainHeader.innerText = "main header";
 
 	const subHeader = document.createElement("h2");
-	subHeader.innerHTML = "Sub Header";
+	subHeader.innerHTML = "sub header";
 
 	homeHeaders.appendChild(mainHeader);
 	homeHeaders.appendChild(subHeader);
@@ -74,13 +74,6 @@ function createMain() {
 }
 
 function createFooter() {
-	/* 
-	<footer>
-		<p>Something Something Something Something Something Something</p>
-		<p>Something Something Something Something Something</p>
-		<p>Something Something Something Something</p>
-	</footer>
-	*/
 	const footer = document.createElement("footer");
 
 	const item1 = document.createElement("p");
@@ -102,7 +95,7 @@ function createFooter() {
 
 function displayWebsite() {
 	const content = document.querySelector(".content");
-	content.appendChild(creatNav());
+	content.appendChild(createNav());
 	content.appendChild(createMain());
 	content.appendChild(createFooter());
 }
