@@ -1,3 +1,5 @@
+import menuContent from "./menu";
+
 function createNav() {
 	const nav = document.createElement("nav");
 
@@ -31,7 +33,7 @@ function createNav() {
 	return nav;
 }
 
-function createMain() {
+function homeContent() {
 	const main = document.createElement("main");
 	main.classList.add("home-content");
 
@@ -85,7 +87,8 @@ function createFooter() {
 function displayWebsite() {
 	const content = document.querySelector(".content");
 	content.appendChild(createNav());
-	content.appendChild(createMain());
+	// content.appendChild(homeContent());
+	content.appendChild(menuContent());
 	content.appendChild(createFooter());
 }
 
