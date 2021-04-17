@@ -9,6 +9,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* harmony import */ var _menu__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
+
+
 function createNav() {
 	const nav = document.createElement("nav");
 
@@ -42,7 +45,7 @@ function createNav() {
 	return nav;
 }
 
-function createMain() {
+function homeContent() {
 	const main = document.createElement("main");
 	main.classList.add("home-content");
 
@@ -96,11 +99,74 @@ function createFooter() {
 function displayWebsite() {
 	const content = document.querySelector(".content");
 	content.appendChild(createNav());
-	content.appendChild(createMain());
+	// content.appendChild(homeContent());
+	content.appendChild((0,_menu__WEBPACK_IMPORTED_MODULE_0__.default)());
 	content.appendChild(createFooter());
 }
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (displayWebsite);
+
+
+/***/ }),
+/* 2 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+function menuContent() {
+	const items = [
+		{ name: "Menu Item 1", price: "000.00" },
+		{ name: "Menu Item 2", price: "000.00" },
+		{ name: "Menu Item 3", price: "000.00" },
+		{ name: "Menu Item 4", price: "000.00" },
+		{ name: "Menu Item 5", price: "000.00" },
+		{ name: "Menu Item 6", price: "000.00" },
+		{ name: "Menu Item 7", price: "000.00" },
+		{ name: "Menu Item 8", price: "000.00" },
+		{ name: "Menu Item 9", price: "000.00" },
+	];
+
+	const main = document.createElement("main");
+	main.classList.add("menu-content");
+
+	items.forEach((item) => {
+		main.appendChild(createMenuItems(item));
+	});
+
+	return main;
+}
+
+function createMenuItems(item) {
+	const itemName = document.createElement("h2");
+	itemName.classList.add("item-name");
+	itemName.innerHTML = item.name;
+
+	const itemPrice = document.createElement("h3");
+	itemPrice.classList.add("item-price");
+	itemPrice.innerHTML = item.price;
+
+	const buyBtn = document.createElement("A");
+	buyBtn.href = "#";
+	buyBtn.classList.add("buy-btn");
+
+	const overlay = document.createElement("div");
+	overlay.classList.add("overlay");
+
+	overlay.appendChild(itemName);
+	overlay.appendChild(itemPrice);
+	overlay.appendChild(buyBtn);
+
+	const menuItems = document.createElement("div");
+	menuItems.classList.add("menu-items");
+
+	menuItems.appendChild(overlay);
+
+	return menuItems;
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (menuContent);
 
 
 /***/ })
@@ -164,10 +230,10 @@ var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _home_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
+/* harmony import */ var _home__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
 
 
-(0,_home_js__WEBPACK_IMPORTED_MODULE_0__.default)();
+(0,_home__WEBPACK_IMPORTED_MODULE_0__.default)();
 
 })();
 
