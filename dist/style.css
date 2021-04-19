@@ -207,11 +207,11 @@ footer p {
 	text-align: center;
 	text-transform: capitalize;
 	font: var(--font-used);
-	font-size: 1em;
+	font-size: 1.5em;
 	color: var(--dark-brown);
 }
 
-.buy-btn {
+.menu-items a {
 	margin: 5px auto;
 	width: 120px;
 	background-color: var(--dark-brown-transparent);
@@ -223,6 +223,7 @@ footer p {
 	text-decoration: none;
 	text-align: center;
 	padding: 10px;
+	font-size: 1em;
 }
 
 .buy-btn:hover {
@@ -233,4 +234,121 @@ footer p {
 .menu-items:hover .overlay {
 	opacity: 1;
 	top: 120px;
+}
+
+.contact-content {
+	margin-top: 70px;
+	height: 100%;
+	background-color: var(--light-brown);
+	display: grid;
+	justify-content: center;
+	align-content: center;
+}
+
+.contact-container {
+	border-radius: 35px;
+	padding: 50px;
+	display: flex;
+	justify-content: space-around;
+	align-content: center;
+	background-color: var(--medium-brown);
+	width: 70vw;
+}
+
+.resto-info *,
+.customer-info * {
+	font: var(--font-used);
+	color: var(--dark-brown);
+}
+
+.resto-info,
+.customer-info {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.resto-info {
+	padding-right: 50px;
+}
+
+.customer-info {
+	padding-left: 50px;
+}
+
+.vertical-line {
+	height: calc(100% + 100px);
+	position: relative;
+	bottom: 50px;
+	border-left: thick solid var(--dark-brown);
+}
+
+.contact-us h2,
+.about-us h2,
+.customer-info h2 {
+	text-align: center;
+	font-size: 2em;
+}
+
+.about-us {
+	margin-bottom: 1.5em;
+}
+
+.contact-list {
+	display: flex;
+	align-content: center;
+	justify-content: space-around;
+}
+
+.contact-item {
+	text-align: center;
+	margin: 1.5em 0;
+	list-style: none;
+}
+
+.contact-link,
+.contact-item h4 {
+	font-size: 1.5em;
+}
+.contact-item h3 {
+	font-size: 1.2em;
+}
+
+.contact-item:last-child {
+	margin-bottom: 0;
+}
+
+.about-us p {
+	text-align: justify;
+	font-size: 1.25em;
+}
+
+.customer-info {
+	justify-content: flex-start;
+}
+
+.message-form {
+	display: grid;
+	justify-content: center;
+	grid-template-columns: 25% auto;
+}
+
+.message-form * {
+	margin: 1.5em 0;
+}
+
+.message-form label {
+	font-size: 1.25em;
+}
+
+#msg-label {
+	margin-bottom: 0.5em;
+}
+
+#msg-box {
+	margin: 0;
+	grid-row: 5;
+	grid-column: 1/-1;
+	text-orientation: sideways;
 }

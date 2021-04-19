@@ -28,11 +28,12 @@ function createMenuItems(item) {
 
 	const itemPrice = document.createElement("h3");
 	itemPrice.classList.add("item-price");
-	itemPrice.innerHTML = item.price;
+	itemPrice.innerHTML = "Php " + item.price;
 
 	const buyBtn = document.createElement("A");
 	buyBtn.href = "#";
 	buyBtn.classList.add("buy-btn");
+	buyBtn.innerText = "Buy Now";
 
 	const overlay = document.createElement("div");
 	overlay.classList.add("overlay");
