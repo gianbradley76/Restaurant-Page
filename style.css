@@ -315,8 +315,8 @@ footer p {
 	font-size: 1.2em;
 }
 
-.contact-item:last-child {
-	margin-bottom: 0;
+.contact-item:first-child {
+	margin: 0;
 }
 
 .about-us p {
@@ -342,13 +342,44 @@ footer p {
 	font-size: 1.25em;
 }
 
+.message-form input {
+	padding: 0 10px;
+	border: none;
+	border-radius: 15px;
+	background-color: var(--light-brown-transparent);
+}
+
+*:focus {
+	outline: none;
+}
+
 #msg-label {
 	margin-bottom: 0.5em;
 }
 
 #msg-box {
+	background-color: var(--light-brown-transparent);
+	resize: none;
 	margin: 0;
 	grid-row: 5;
 	grid-column: 1/-1;
-	text-orientation: sideways;
+	padding: 10px 15px;
+	border: none;
+	border-radius: 15px;
+}
+
+#submit-msg {
+	color: var(--light-brown);
+	background-color: var(--dark-brown-transparent);
+	padding: 10px 15px;
+	justify-self: center;
+	font-size: 1.25em;
+	grid-column: 1/-1;
+	border-radius: 15px;
+	border: none;
+}
+
+#submit-msg:hover {
+	color: var(--dark-brown);
+	background-color: var(--light-brown);
 }
