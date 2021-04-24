@@ -249,13 +249,8 @@ function aboutInfo() {
 	aboutUS.appendChild(aboutHeader);
 
 	const aboutText = document.createElement("p");
-	aboutText.innerText = `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error,
-          								accusamus magnam? Aut accusamus corrupti omnis iusto
-          								voluptatibus, amet hic aliquam quibusdam molestiae voluptates
-          								harum adipisci, quas magni rem veniam voluptate, iure vero sed
-          								obcaecati itaque! Et suscipit officia corrupti consequuntur
-          								accusamus tempora doloremque, perferendis ipsam ipsum nihil
-          								beatae sequi soluta?`;
+	aboutText.innerText =
+		"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Error, accusamus magnam? Aut accusamus corrupti omnis iusto voluptatibus, amet hic aliquam quibusdam molestiae voluptates harum adipisci, quas magni rem veniam voluptate, iure vero sed obcaecati itaque! Et suscipit officia corrupti consequuntur accusamus tempora doloremque, perferendis ipsam ipsum nihil beatae sequi soluta?";
 	aboutUS.appendChild(aboutText);
 
 	return aboutUS;
