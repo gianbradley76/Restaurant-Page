@@ -11,7 +11,7 @@ function menuContent() {
 		{ name: "Menu Item 9", price: "000.00" },
 	];
 
-	const main = document.createElement("main");
+	const main = document.querySelector("main");
 	main.classList.add("menu-content");
 
 	items.forEach((item) => {
