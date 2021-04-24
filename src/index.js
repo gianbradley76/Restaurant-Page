@@ -28,12 +28,4 @@ const eventController = (() => {
 		main.innerHTML = "";
 		contactContent();
 	});
-
-	const orderBtn = document.getElementById("order-btn");
-	orderBtn.addEventListener("click", () => {
-		const main = document.querySelector("main");
-		main.classList.remove("home-content", "contact-content");
-		main.innerHTML = "";
-		menuContent();
-	});
 })();
