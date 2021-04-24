@@ -50,7 +50,7 @@ nav {
 	text-transform: uppercase;
 	letter-spacing: 5px;
 	font-size: 20px;
-	cursor: pointer;
+	cursor: default;
 }
 
 .nav-links {
@@ -291,6 +291,10 @@ footer p {
 	font-size: 2em;
 }
 
+.about-us h2 {
+	margin-bottom: 1em;
+}
+
 .about-us {
 	margin-bottom: 1.5em;
 }
@@ -342,11 +346,21 @@ footer p {
 	font-size: 1.25em;
 }
 
-.message-form input {
+.message-form input[type="text"] {
 	padding: 0 10px;
 	border: none;
-	border-radius: 15px;
+	background-color: var(--medium-brown);
+	transition: border-radius, background-color 0.5s ease-in-out;
+}
+
+.message-form input[type="text"] {
+	border-radius: 0;
+	border-bottom: 2px solid var(--light-brown-transparent);
+}
+
+.message-form input[type="text"]:focus {
 	background-color: var(--light-brown-transparent);
+	border-radius: 15px;
 }
 
 *:focus {
@@ -358,6 +372,7 @@ footer p {
 }
 
 #msg-box {
+	width: 100%;
 	background-color: var(--light-brown-transparent);
 	resize: none;
 	margin: 0;
@@ -381,5 +396,5 @@ footer p {
 
 #submit-msg:hover {
 	color: var(--dark-brown);
-	background-color: var(--light-brown);
+	background-color: var(--light-brown-transparent);
 }
